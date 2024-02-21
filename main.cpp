@@ -15,6 +15,11 @@ int main(int argc, char* argv[]) {
 		} else {
 			cerr << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n"; 
 		}
+		for(int j=0; j<sizeof(argv[i]); j++) {
+			if(argv[i][j] != 0) {
+				cerr << argv[i][j] << "ERR_VALUE: RGB values must be in 0-F range\n" ;
+			}
+		}
 	}
 	return 0;
 }
