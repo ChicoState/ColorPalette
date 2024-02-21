@@ -6,7 +6,7 @@ bool all_hex(char*);
 int main(int argc, char* argv[]) {
   int valid_colors = 0;
   if(argc <2){
-    cout << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces\n";
+    std::cout << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces\n";
     return 0;
   }
   for(int i=1; i < argc; i++) {
