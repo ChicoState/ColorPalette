@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstring>
 
+using namespace std;
+
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
