@@ -48,4 +48,4 @@ docker run -it cpp-container sh
 ```
 docker run -v "$(pwd)":/usr/src -it cpp-container
 ```
-
+![Build status](https://github.com/mcsharland/ColorPalette/actions/workflows/main.yml/badge.svg)
