@@ -13,14 +13,14 @@ int main(int argc, char* argv[]) {
     return 0;
   }
 
-    for(int i=1; i < argc; i++) {
-      int length = strlen(argv[i]);
-      if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
-        cout << "#" << argv[i] << endl;
-      }  
-    }
-    return 0;
-    
+  for(int i=1; i < argc; i++) {
+    int length = strlen(argv[i]);
+    if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
+      cout << "#" << argv[i] << endl;
+    }  
+  }
+  
+  return 0;
   }
 
 bool all_hex(char* word) {
