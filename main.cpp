@@ -28,6 +28,6 @@ bool all_hex(char* word) {
     }
   }
 
-  //no non-hex characters foundd
+  //no non-hex characters found
   return true;
 }
