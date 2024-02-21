@@ -6,7 +6,7 @@ using namespace std;
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
-  int valid_colors = 0;
+//  int valid_colors = 0;
   if(argc < 2)
 	cout<<"ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces"<<endl;
   for(int i=1; i < argc; i++) {
@@ -22,7 +22,8 @@ int main(int argc, char* argv[]) {
 }
 
 bool all_hex(char* word) {
-  for(int i=0; i<strlen(word); i++) {
+  int length = strlen(word);
+  for(int i=0; i<length; i++) {
     if((word[i] >= '0' && word[i] <= '9') || (word[i] >= 'a' && word[i] <= 'f')
       || (word[i] >= 'A' && word[i] <='F')) {
       continue;
