@@ -10,7 +10,15 @@ int main(int argc, char* argv[]) {
 
   for(int i=1; i < argc; i++) {
     int length = strlen(argv[i]);
-    if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
+	bool correctLen = (length == 3 || length == 6);
+	bool validHex = all_hex(argv[i]);
+	if(!correctLen) {
+		cout << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
+	}
+	if(!validHex) {
+		cout << argv[i] << " ERR_VALUE: RGB values must be in 0-F range\n";
+	}
+    if(correctLen && validHex) {
       cout << "#" << argv[i] << endl;
     }  
   }
