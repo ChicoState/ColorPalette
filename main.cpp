@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
   }
   return 0;
 }
-
+ 
 bool all_hex(char* word, int argc) {
   if (argc < 2) {
     cerr << " ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces" << endl;
