@@ -1,0 +1,7 @@
+name: main
+
+on: [push]
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - run: g++ main.cpp --std=c++17 -o Palette
