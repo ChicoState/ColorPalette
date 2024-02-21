@@ -1,4 +1,5 @@
 # ColorPalette
+[![Build C++](https://github.com/gdsmith1/ColorPalette/actions/workflows/main.yml/badge.svg)](https://github.com/gdsmith1/ColorPalette/actions/workflows/main.yml)
 
 This is a simple C++ program for managing a collection or palette of RGB colors.
 
