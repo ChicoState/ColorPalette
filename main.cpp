@@ -12,7 +12,16 @@ int main(int argc, char* argv[]) {
     int length = strlen(argv[i]);
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
       cout << "#" << argv[i] << endl;
-    }  
+    }else{
+
+	cout << argv[i];	
+	// values are not 3 or 6 characters long
+	if  (all_hex(argv[i])){
+		printf(" ERR_LENGTH: RGB values must be either 3 or 6 characters long.\n");
+	}else{	// Value is not hex
+		printf(" ERR_VALUE: RGB values must be in 0-F range\n", argv[i]);
+	}
+    }
   }
   return 0;
 }
