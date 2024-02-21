@@ -3,31 +3,30 @@
 
 using namespace std;
 
-bool all_hex(char*);
+bool all_hex(char* color);
 
 int main(int argc, char* argv[]) {
-  int valid_colors = 0;
-
-  for(int i=1; i < argc; i++) {
-    int length = strlen(argv[i]);
-    if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
-      cout << "#" << argv[i] << endl;
-    }  
-  }
-  return 0;
+    cout << "Valid colors provided:" << endl;
+    for(int i = 1; i < argc; ++i) {
+        if(all_hex(argv[i])) { // Check if the provided color is valid and start from 1 because 0 is the name of the program
+            cout << "#" << argv[i] << endl;
+        }
+    }
+    return 0;
 }
 
-bool all_hex(char* word) {
-  for(int i=0; i<strlen(word); i++) {
-    if((word[i] >= '0' && word[i] <= '9') || (word[i] >= 'a' && word[i] <= 'f')
-      || (word[i] >= 'A' && word[i] <='F')) {
-      continue;
+// Function to check if the provided string is a valid hexadecimal color code
+bool all_hex(char* color) {
+    int length = strlen(color);
+    // Check if the color code's length is either 3 or 6
+    if(length != 3 && length != 6) {
+        return false; // Return false if the length is not 3 or 6
     }
-    else {
-      return false;
+    // Check each character to confirm it's a valid hexadecimal digit
+    for(int i = 0; i < length; ++i) {
+        if(!((color[i] >= '0' && color[i] <= '9') || (color[i] >= 'a' && color[i] <= 'f') || (color[i] >= 'A' && color[i] <= 'F'))) {
+            return false;  // Return false if a non-hexadecimal digit is found
+        }
     }
-  }
-
-  //no non-hex characters found
-  return true;
+    return true;  // Return true if all characters are valid hexadecimal digits
 }
