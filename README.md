@@ -1,4 +1,4 @@
-[![Build C++](https://github.com/bbynoCode/ColorPalette/actions/workflows/actions.yml/badge.svg)](https://github.com/bbynoCode/ColorPalette/actions/workflows/actions.yml)
+[![Build C++](https://github.com/bbynoCode/ColorPalette/actions/workflows/actions.yml/badge.svg?branch=main)](https://github.com/bbynoCode/ColorPalette/actions/workflows/actions.yml)
 
 # ColorPalette
 
