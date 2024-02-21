@@ -1,3 +1,5 @@
+[![C/C++ CI](https://github.com/the29ster/ColorPalette/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/the29ster/ColorPalette/actions/workflows/c-cpp.yml)
+
 # ColorPalette
 
 This is a simple C++ program for managing a collection or palette of RGB colors.
