@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
       cout << "#" << argv[i] << endl;
     } 
     else{
-      cout << "___ ERR_LENGTH: RGB values must be either 3 or 6 characters long " << endl;
+      cout << "___ ERR_LENGTH: RGB values must be either 3 or 6 characters long" << endl;
     } 
   }
   return 0;
@@ -27,7 +27,7 @@ bool all_hex(char* word) {
       continue;
     }
     else {
-      cout << "___ ERR_VALUE: RGB values must be in 0-F range " <<endl;
+      cout << "___ ERR_VALUE: RGB values must be in 0-F range" <<endl;
       return false;
     }
   }
