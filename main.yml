@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Build with g++
+      run: g++ main.cpp --std=c++17 -o main.out
+      
+    - name: Display directory contents
+      run: ls -l
+      
+    - name: Save built artifact
+      if: success()
+      uses: actions/upload-artifact@v2
+      with:
+        name: main-executable
+        path: main.out
