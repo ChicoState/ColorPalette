@@ -1,5 +1,4 @@
-[![C/C++ CI](https://github.com/infinimineralex/ColorPalette/actions/workflows/main.yml/badge.svg)](https://github.com/infinimineralex/ColorPalette/actions/workflows/main.yml)
-
+[![Build C++](https://github.com/infinimineralex/ColorPalette/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/infinimineralex/ColorPalette/actions/workflows/c-cpp.yml)
 
 # ColorPalette
 
