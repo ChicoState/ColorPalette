@@ -1,3 +1,4 @@
+![Build C++](https://github.com/droge91/ColorPalette/actions/workflows/main.yml/badge.svg)](https://github.com/droge91/ContIntegration/actions/workflows/c-cpp.yml)
 # ColorPalette
 
 This is a simple C++ program for managing a collection or palette of RGB colors.
