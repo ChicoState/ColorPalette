@@ -10,6 +10,10 @@ int main(int argc, char* argv[]) {
 
   for(int i=1; i < argc; i++) {
     int length = strlen(argv[i]);
+    if( (length != 3) && (length != 6)) {
+    	cerr << "Your color is of an incorrect length." << endl;
+    	return 1;
+    }
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
       cout << "#" << argv[i] << endl;
     }  
@@ -24,6 +28,7 @@ bool all_hex(char* word) {
       continue;
     }
     else {
+	cerr << "Your color is not all valid hex." << endl;
       return false;
     }
   }
