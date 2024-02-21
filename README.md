@@ -1,3 +1,4 @@
+[![C++ CI](https://github.com/Tabris05/ColorPalette/actions/workflows/actions.yml/badge.svg)](https://github.com/Tabris05/ColorPalette/actions/workflows/actions.yml)
 # ColorPalette
 
 This is a simple C++ program for managing a collection or palette of RGB colors.
