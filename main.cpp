@@ -1,13 +1,11 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
-
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
   if (argc < 2) {
-    cerr << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces" << endl;
+    std::cerr << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces" << std::endl;
     return 1;
   }
 
@@ -16,13 +14,13 @@ int main(int argc, char* argv[]) {
   for(int i=1; i < argc; i++) {
     int length = strlen(argv[i]);
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
-      cout << "#" << argv[i] << endl;
+      std::cout << "#" << argv[i] << std::endl;
       continue;
     }  
     else if (length == 3 || length == 6){
-      cerr << argv[i] << " ERR_VALUE: RGB values must be in 0-F range" << endl;
+      std::cerr << argv[i] << " ERR_VALUE: RGB values must be in 0-F range" << std::endl;
     }
-    else{cerr << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long" << endl;
+    else{std::cerr << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long" << std::endl;
     }
   }
   return 0;
