@@ -49,3 +49,4 @@ docker run -it cpp-container sh
 docker run -v "$(pwd)":/usr/src -it cpp-container
 ```
 
+i[![Build C++](https://github.com/csucrljohnson1/ColorPalette/actions/workflows/main.yml/badge.svg)](https://github.com/csucrljohnson1/ColorPalette/actions/workflows/main.yml)
