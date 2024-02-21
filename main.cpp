@@ -1,19 +1,16 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
-
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
   int valid_colors = 0;
 
   for(int i=1; i < argc; i++) {
-    int length = strlen(argv[i]);
+    int length = std::strlen(argv[i]);
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
       cout << "#" << argv[i] << endl;
-    } 
-    else if ( (length != 3 || length != 6) && all_hex(argv[i]) ) { //length is invalid, but char range is valid
+    } else if ( (length != 3 || length != 6) && all_hex(argv[i]) ) { //length is invalid, but char range is valid
       cout << "#" << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long" << endl;
     } else if ( (length == 3 || length == 6) && !all_hex(argv[i]) ) { //length is valid, but char range is invalid
       cout << "#" << argv[i] << " ERR_VALUE: RGB values must be in 0-F range" << endl;
