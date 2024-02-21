@@ -8,6 +8,11 @@ bool all_hex(char*);
 int main(int argc, char* argv[]) {
 	int valid_colors = 0;
 
+	if(argc < 2) {
+		cerr << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces\n";
+		return 1;
+	}
+
 	for(int i=1; i < argc; i++) {
 		int length = strlen(argv[i]);
 		if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
