@@ -17,13 +17,22 @@ int main(int argc, char* argv[]) {
   return 0;
 }
 
-bool all_hex(char* word) {
+bool all_hex(char* word, int argc) {
+  if (argc < 2) {
+    cerr << " ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces" << endl;
+    exit(-1);
+  }
+  if (strlen(word) != 3 || strlen(word) != 6){
+    cout << strlen(word) << " ERR_LENGTH: RGB values must be either 3 or 6 characters long" << endl;
+    exit(-1);
+  }
   for(int i=0; i<strlen(word); i++) {
     if((word[i] >= '0' && word[i] <= '9') || (word[i] >= 'a' && word[i] <= 'f')
       || (word[i] >= 'A' && word[i] <='F')) {
       continue;
     }
     else {
+      cerr << "ERR_VALUE: RGB values must be in 0-F range";
       return false;
     }
   }
