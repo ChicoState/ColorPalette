@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
-
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
@@ -13,13 +11,13 @@ int main(int argc, char* argv[]) {
 	bool correctLen = (length == 3 || length == 6);
 	bool validHex = all_hex(argv[i]);
 	if(!correctLen) {
-		cout << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
+		std::cout << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
 	}
 	if(!validHex) {
-		cout << argv[i] << " ERR_VALUE: RGB values must be in 0-F range\n";
+		std::cout << argv[i] << " ERR_VALUE: RGB values must be in 0-F range\n";
 	}
     if(correctLen && validHex) {
-      cout << "#" << argv[i] << endl;
+		std::cout << "#" << argv[i] << std::endl;
     }  
   }
   return 0;
