@@ -13,6 +13,10 @@ int main(int argc, char* argv[]) {
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
       cout << "#" << argv[i] << endl;
     }  
+    else
+    {
+      cout << length  << "ERR_LENGTH: RGB values must be either 3 or 6 characters long" << endl;
+    }
   }
   return 0;
 }
