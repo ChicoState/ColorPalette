@@ -27,7 +27,7 @@ bool all_hex(char* word) {
       continue;
     }
     else {
-      cout << "___ ERR_VALUE: RGB values must be in 0-F range" <<endl;
+      cout << "___ ERR_VALUE: RGB values must be in 0-F range " <<endl;
       return false;
     }
   }
