@@ -1,23 +1,21 @@
 #include <iostream>
 #include <cstring>
 
-using namespace std;
-
 bool all_hex(char*);
 
 int main(int argc, char* argv[]) {
   if(argc < 2) {
-    cerr << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces\n";
+    std::cerr << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces\n";
     return 1;
   }
   int valid_colors = 0;
 
   for(int i=1; i < argc; i++) {
-    int length = strlen(argv[i]);
+    int length = std::strlen(argv[i]);
     if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
-      cout << "#" << argv[i] << endl;
+      std::cout << "#" << argv[i] << endl;
     }  else {
-      cerr << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
+      std::cerr << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
     }
   }
   return 0;
@@ -30,7 +28,7 @@ bool all_hex(char* word) {
       continue;
     }
     else {
-      cerr << word << " ERR_VALUE: RGB values must be in 0-F range\n";
+      std::cerr << word << " ERR_VALUE: RGB values must be in 0-F range\n";
       return false;
     }
   }
