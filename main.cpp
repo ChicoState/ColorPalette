@@ -20,6 +20,7 @@ int main(int argc, char* argv[]) {
       }  
     }
     return 0;
+    
   }
 
 bool all_hex(char* word) {
