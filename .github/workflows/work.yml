@@ -1,0 +1,18 @@
+name: C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install G++
+      run: sudo apt-get install g++ -y
+    - name: Compile main.cpp file
+      run: g++ main.cpp --std=c++17 -o main
