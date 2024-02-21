@@ -1,10 +1,10 @@
 #include <iostream>
 #include <cstring>
 
+<<<<<<< HEAD
 using namespace std;
 
 char all_hex(char*);
-
 int main(int argc, char* argv[]) {
   int valid_colors = 0;
   if (argc < 2){
@@ -21,6 +21,7 @@ int main(int argc, char* argv[]) {
     } else if(returnval != '0'){
       cout << returnval << " ERR_VALUE: RGB values must be in 0-F range\n";
     }
+    }  
   }
   return 0;
 }
