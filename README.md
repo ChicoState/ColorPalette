@@ -49,3 +49,7 @@ docker run -it cpp-container sh
 docker run -v "$(pwd)":/usr/src -it cpp-container
 ```
 
+
+// Added the status badge
+
+[![CI](https://github.com/Mattatatouille/ColorPalette/actions/workflows/ci.yml/badge.svg)](https://github.com/Mattatatouille/ColorPalette/actions/workflows/ci.yml)
