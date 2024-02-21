@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cstring>
 
-<<<<<<< HEAD
 using namespace std;
 
 char all_hex(char*);
@@ -9,7 +8,7 @@ int main(int argc, char* argv[]) {
   int valid_colors = 0;
   if (argc < 2){
     cout << "ERR_MISSING: One or more RGB values should be provided as arguments, separated by spaces" << endl;
-    return 0;
+    exit(0);
   }
   for(int i=1; i < argc; i++) {
     int length = strlen(argv[i]);
@@ -22,7 +21,6 @@ int main(int argc, char* argv[]) {
       cout << returnval << " ERR_VALUE: RGB values must be in 0-F range\n";
     }
     }  
-  }
   return 0;
 }
 
