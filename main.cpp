@@ -39,3 +39,4 @@ char all_hex(char* word) {
   //no non-hex characters found
   return '0';
 }
+
