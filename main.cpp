@@ -8,9 +8,17 @@ int main(int argc, char* argv[]) {
 
   for(int i=1; i < argc; i++) {
     int length = std::strlen(argv[i]);
-    if( (length == 3 || length == 6) && all_hex(argv[i]) ) {
-      std::cout << "#" << argv[i] << std::endl;
-    }  
+    if( (length == 3 || length == 6) ){
+      if( all_hex(argv[i]) ) {
+        std::cout << "#" << argv[i] << std::endl;
+      }
+      else{
+        std::cout << argv[i] << " ERR_VALUE: RGB values must be in 0-F range\n";
+      }
+    }
+    else{
+      std::cout << argv[i] << " ERR_LENGTH: RGB values must be either 3 or 6 characters long\n";
+    }
   }
   return 0;
 }
